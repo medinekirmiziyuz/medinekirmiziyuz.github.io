@@ -1,0 +1,351 @@
+:root {
+
+    --cadet-blue-crayola: hsl(240, 10%, 70%);
+    --altinsarisi: hsl(50, 100%, 54%);
+    --gokyuzu_mavisi: hsl(196, 84%, 63%);
+    --gece_mavisi: hsl(231, 83%, 25%);
+    --acik_sari: hsl(50, 100%, 64%);
+    --mor_gri: hsl(225, 24%, 27%);
+    --turuncu: hsl(7, 96%, 61%);
+    --uzay_mavisi: hsl(243, 23%, 18%);
+    --pembe: hsl(353, 83%, 65%);
+    --koyu_mavi: hsl(230, 9%, 13%);
+    --acik_mavi: hsl(222, 88%, 55%);
+    --acik_mor: hsl(230, 52%, 63%);
+    --gri: hsl(254, 7%, 65%);
+    --kirmizi: hsl(2, 85%, 35%); /*sayfa renkleri ayarlanıyor.*/
+    --siyah: hsl(0, 0%, 0%);
+    --beyaz: hsl(0, 0%, 100%);
+  
+  
+  
+    --ff-open-sans: 'Open Sans', sans-serif;
+    --ff-barlow: 'Barlow', sans-serif;  /* yazı tipleri */
+    --ff-poppins: 'Poppins', sans-serif;
+  
+  
+  
+    --radius-5: 5px;
+    --radius-10: 10px;
+    --radius-15: 15px;    /* etrafının egimi */
+    --radius-20: 20px;
+  
+  
+    --fs-1: 6.4rem;
+    --fs-2: 3.5rem; /* yazı boyutu */
+    --fs-3: 3.6rem;
+    --section-padding: 80px;
+  
+    --shadow: 0 -5px 10px var(--gri); /* sayfa asagı kayarken beyaz ısıkla ayırmayı saglar */
+  
+  
+  
+    --transition-1: 0.05s ease;
+    --transition-2: 0.25s ease;     /* butonların tepki verme suresini ayarlar */
+    --cubic-out: cubic-bezier(0.33, 0.85, 0.56, 1.02);
+  
+  }
+  
+  
+  
+  *,
+  *::before,
+  *::after {/*sayfa kenarlarını ayarlar */
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  li { list-style: none; } /* listedeki noktaların cıkartılmasını saglar. */
+  
+  
+  a {
+    text-decoration: none; /* linklerin altı cizili olmamasını saglar. */
+    color: inherit;
+  }
+  
+  
+  a,
+  img,
+  span,
+  input,
+  strong,
+  button,
+  textarea,
+  ion-icon { display: block; } /* blok halinde yazılmasını saglar yan yana degil */
+  
+  
+  img { height: auto; }
+  
+  
+  button,
+  input,
+  textarea {
+    background: none;
+    font: inherit;
+  }
+  
+  
+  input,
+  textarea { width: 100%; }
+  
+  
+  html {
+    font-size: 10px;
+    font-family: var(--ff-open-sans);
+    scroll-behavior: smooth;
+  
+  }
+  
+  body {
+    background-color: var(--mor_gri);
+    color: var(--beyaz);
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+  
+  
+  
+  
+  .container { padding-inline: 20px; }
+  
+  .img-cover { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .section { padding-block: var(--section-padding); } 
+  
+  
+  /*  HEADER  */
+  
+  .header {
+    position: fixed;
+    padding-block: 15px;
+    width: 100%;
+    height: 65px;
+    box-shadow: var(--shadow);
+    z-index: 4;
+  }
+  
+  
+  
+  .header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }  
+  
+  .navbar-link:is(:hover, :focus) { color: var(--kirmizi); }
+
+  
+  /*  HERO Arka plan rengini ayarlar */
+  
+  .elem,
+  .rotate-img { display: none; }
+  
+  .hero {
+    min-height: 100vh;
+    display: grid;
+  
+  }
+  
+  .hero-content {
+    color: var(--beyaz);
+  }
+  
+  .hero-title { 
+    font-family: var(--ff-barlow);
+    font-size: var(--fs-5);
+    line-height: 1.3;
+  }
+  
+  .hero-title strong {
+    font-size: var(--fs-2);
+    font-weight: inherit; 
+  }
+  
+  
+  .btn-group {
+    display: flex;
+  }
+  
+  
+  
+  
+  
+  /*  HAKKIMDA  */
+  .about .section-subtitle { margin-block-end: 20px; }
+  
+  .about .section-title { margin-block-end: 20px; }
+  
+  .about .section-text { margin-block-end: 60px; }
+  .about-banner > .img-cover { border-radius: inherit; }
+  
+  .about :is(.section-title, .section-subtitle, .section-text) { text-align: left; }
+  
+  .about :is(.section-title, .section-text) { margin-block-end: 30px; }
+  
+  
+  
+  
+  /*  iletisim  */
+  
+  .iletisim-card {
+    background-color: var(--koyu_mavi);
+    padding: 50px 25px;
+    border-radius: var(--radius-20);
+  }
+  
+  
+  .iletisim .section-title {
+    text-align: left;
+    margin-block-end: 30px;
+  }
+  
+  .iletisim-form { margin-block-end: 50px; }
+  
+  .iletisim-input {
+    background-color: var(--beyaz);
+    color: var(--siyah);
+    border-radius: var(--radius-5);
+    padding: 15px 25px;
+    font-size: var(--fs-5);
+    margin-block-end: 15px;
+  }
+  
+  
+  textarea.iletisim-input {
+    resize: vertical;
+    min-height: 100px;
+    height: 180px;
+    max-height: 300px;
+  }
+  
+  .buton-submit {
+    background-color: var(--kirmizi);
+    color: var(--beyaz);
+    font-family: var(--ff-barlow);
+    font-size: var(--fs-5);
+    width: 100%;
+    padding: 10px;
+    border-radius: var(--radius-5);
+    transition: var(--transition-2);
+  }
+  
+  .buton-submit:is(:hover, :focus) {
+    background-color: var(--beyaz);
+    color: var(--siyah);
+  }
+  
+  .iletisim-item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .iletisim-item:not(:last-child) { margin-block-end: 20px; }
+  
+  .iletisim-item-title {
+    color: var(--beyaz);
+    font-family: var(--ff-barlow);
+  
+  }
+  
+  .iletisim-item-link { transition: var(--transition-1); }
+  
+  .iletisim-item-link:not(address):is(:hover, :focus) { color: var(--beyaz); }
+  
+  
+  .footer-link {
+    max-width: max-content;
+    margin-inline: auto;
+    padding: var(--padding, 40px 40px);
+  
+  
+  }
+  .footer > .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
+
+    .container {
+      max-width: 1050px;
+      margin-inline: auto;
+    }
+  
+  
+  
+    /*  HEADER  */
+  
+    .nav-toggle-btn { display: none; }
+  
+    .header,
+    .header.nav-active {
+      background-color: var(--gri);
+      box-shadow: none;
+      height: unset;
+      padding-block: 30px;
+    }
+  
+
+  
+    .navbar { all: unset; }
+  
+    .navbar-list {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+  
+  
+     /* HERO  */
+  
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  
+  
+    .hero-title span { font-size: 3rem; }
+  
+    .hero-title {
+      --fs-5: 2.2rem;
+      margin-block-end: 25px;
+    }
+    
+  
+    .hero-banner {
+      
+      margin-block-end: 0;
+      order: 1;
+      width: 340px; 
+      height: 390px;
+      margin-inline-start: auto;
+    }
+  
+     /* Hakkımda */
+  
+    .about { padding-block: 180px; }
+  
+    .about .container {
+      display: grid; 
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+  
+     /* İletisim */
+  
+    .iletisim-card { padding: 75px; }
+  
+    .iletisim .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px; 
+    }
